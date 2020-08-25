@@ -1,19 +1,20 @@
 import React from 'react';
-import './App.css';
 import Header from './header';
-import ProductItem from './productItem';
+import ProductList from './productList';
 
-const product = {
-  id: 1,
-  name: 'mango',
-};
+function App({ products }) {
+  function addToCart(product) {
+    console.log(product);
+  }
 
-function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
       <div>
-        <ProductItem product={product} />
+        <ProductList
+          products={products}
+          onAddClick={addToCart}
+        />
       </div>
     </div>
   );

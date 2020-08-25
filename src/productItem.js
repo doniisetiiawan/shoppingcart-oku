@@ -1,8 +1,18 @@
 import React from 'react';
 
-function ProductItem({ product }) {
+function ProductItem({ product, onAddClick }) {
   return (
-    <div>{product.name}</div>
+    <div>
+      <div>{product.name}</div>
+      <div>
+        <button
+          type="button"
+          onClick={() => onAddClick(product)}
+        >
+          Add
+        </button>
+      </div>
+    </div>
   );
 }
 
