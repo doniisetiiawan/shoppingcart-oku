@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers';
@@ -10,7 +11,7 @@ import thunks from './thunks/productsThunks';
 
 const store = createStore(
   rootReducer,
-  applyMiddleware(thunk),
+  composeWithDevTools(applyMiddleware(thunk)),
 );
 store.dispatch(thunks.fetchProducts());
 

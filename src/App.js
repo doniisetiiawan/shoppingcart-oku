@@ -3,13 +3,17 @@ import Header from './header';
 import './App.css';
 import ProductList from './containers/productListContainer';
 import ShoppingCart from './containers/shoppingCartContainer';
+import ProductSearch from './containers/ProductSearchContainer';
 
-function App({ products }) {
+function App() {
   return (
     <div>
       <Header />
       <div className="content">
-        <ProductList products={products} />
+        <div>
+          <ProductSearch />
+          <ProductList />
+        </div>
         <ShoppingCart />
       </div>
     </div>
