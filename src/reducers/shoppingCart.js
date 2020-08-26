@@ -1,28 +1,26 @@
+import { handleActions } from 'redux-actions';
+import { Map } from 'immutable';
+import actions from '../actions/ShoppingCartActions';
+
 function getProductQuantity(map, product) {
-  const existingProduct = map[product.id];
-  return existingProduct ? existingProduct.quantity : 0;
+  const existingProduct = map.get(product.id);
+  return (existingProduct) ? existingProduct.quantity : 0;
 }
 
-function addToCart(map, product) {
-  const newMap = { ...map };
+function addToCart(map, action) {
+  const product = action.payload;
   const quantity = getProductQuantity(map, product) + 1;
-  newMap[product.id] = { ...product, quantity };
-  return Object.freeze(newMap);
+  const newProduct = { ...product, quantity };
+  return map.set(product.id, newProduct);
 }
 
-function removeFromCart(map, product) {
-  const newMap = { ...map };
-  delete newMap[product.id];
-  return Object.freeze(newMap);
+function removeFromCart(map, action) {
+  const product = action.payload;
+  return map.remove(product.id);
 }
 
-export default function (shoppingMap = {}, action) {
-  switch (action.type) {
-    case 'ADD_TO_CART':
-      return addToCart(shoppingMap, action.product);
-    case 'REMOVE_FROM_CART':
-      return removeFromCart(shoppingMap, action.product);
-    default:
-      return shoppingMap;
-  }
-}
+export default handleActions({
+  [actions.addToCart]: addToCart,
+  [actions.removeFromCart]: removeFromCart,
+},
+Map());

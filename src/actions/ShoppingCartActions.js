@@ -1,15 +1,6 @@
-function addToCart(product) {
-  return {
-    type: 'ADD_TO_CART',
-    product,
-  };
-}
+import { createAction } from 'redux-actions';
 
-function removeFromCart(product) {
-  return {
-    type: 'REMOVE_FROM_CART',
-    product,
-  };
-}
+const addToCart = createAction('addToCart');
+const removeFromCart = createAction('remove_from_cart');
 
-export { addToCart, removeFromCart };
+export default { addToCart, removeFromCart };
