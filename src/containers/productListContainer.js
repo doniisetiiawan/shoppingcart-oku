@@ -2,6 +2,12 @@ import { connect } from 'react-redux';
 import actions from '../actions/ShoppingCartActions';
 import ProductList from '../productList';
 
+function mapStateToProps(state) {
+  return {
+    products: state.products,
+  };
+}
+
 function mapDispatchToProps(dispatch) {
   return {
     onAddClick(product) {
@@ -11,6 +17,6 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
 )(ProductList);
