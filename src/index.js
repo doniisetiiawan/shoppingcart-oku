@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import ShoppingCartStore from './ShoppingCartStore';
+import rootReducer from './reducers';
 
 const products = [
   {
@@ -17,14 +19,13 @@ const products = [
   },
 ];
 
-const shoppingCartStore = ShoppingCartStore();
+const store = createStore(rootReducer);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App
-      products={products}
-      shoppingCartStore={shoppingCartStore}
-    />
+    <Provider store={store}>
+      <App products={products} />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
