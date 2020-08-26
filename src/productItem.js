@@ -1,8 +1,9 @@
 import React from 'react';
+import './ProductItem.css';
 
 function ProductItem({ product, onAddClick }) {
   return (
-    <div>
+    <div className="product-list-item">
       <div>{product.name}</div>
       <div>
         <button
