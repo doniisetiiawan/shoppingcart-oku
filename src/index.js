@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import ShoppingCartStore from './ShoppingCartStore';
 
 const products = [
   {
@@ -13,11 +14,17 @@ const products = [
     id: 2,
     name: 'apple',
     price: 5,
-  }];
+  },
+];
+
+const shoppingCartStore = ShoppingCartStore();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App products={products} />
+    <App
+      products={products}
+      shoppingCartStore={shoppingCartStore}
+    />
   </React.StrictMode>,
   document.getElementById('root'),
 );
