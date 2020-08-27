@@ -2,7 +2,8 @@
   "env": {
     "browser": true,
     "es2020": true,
-    "node": true
+    "node": true,
+    "jest/globals": true
   },
   "extends": ["plugin:react/recommended", "airbnb"],
   "parser": "babel-eslint",
@@ -13,7 +14,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "jest"],
   "rules": {
     "react/jsx-filename-extension": "off",
     "react/jsx-one-expression-per-line": "off",
