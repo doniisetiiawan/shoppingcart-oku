@@ -9,4 +9,9 @@ function fetchProducts() {
     .then(toJson);
 }
 
-export default { fetchProducts };
+function fetchProduct(id) {
+  return fetch(`${baseUrl}/fruits/${id}`)
+    .then(toJson);
+}
+
+export default { fetchProducts, fetchProduct };

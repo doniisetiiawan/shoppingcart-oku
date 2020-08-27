@@ -10,4 +10,13 @@ function fetchProducts() {
   };
 }
 
-export default { fetchProducts };
+function fetchProduct(id) {
+  return function (dispatch) {
+    return api
+      .fetchProduct(id)
+      .then(actions.setCurrentProduct)
+      .then(dispatch);
+  };
+}
+
+export default { fetchProducts, fetchProduct };

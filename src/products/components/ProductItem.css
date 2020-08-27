@@ -4,3 +4,12 @@
   background-color: #cc6500;
   color: #fff;
 }
+
+.product-list-item > div {
+  margin: 5px 0;
+}
+
+.product-list-item a {
+  color: #fff;
+  text-decoration: none;
+}
