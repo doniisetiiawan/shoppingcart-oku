@@ -1,5 +1,5 @@
-import actions from '../actions/queryActions';
-import queryReducer from './query';
+import actions from '../../actions/queryActions';
+import queryReducer from './queryReducer';
 
 test('query() can set query', () => {
   // arrange

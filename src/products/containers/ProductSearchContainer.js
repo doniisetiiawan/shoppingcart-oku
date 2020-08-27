@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import actions from '../actions/queryActions';
-import ProductSearch from '../productSearch';
+import actions from '../actions';
+import ProductSearch from '../components/productSearch';
 
 function mapStateToProps(state) {
   return {

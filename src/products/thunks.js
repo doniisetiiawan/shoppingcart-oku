@@ -1,5 +1,5 @@
-import api from '../api/productsAPI';
-import actions from '../actions/productsActions';
+import api from './api';
+import actions from './actions';
 
 function fetchProducts() {
   return function (dispatch) {

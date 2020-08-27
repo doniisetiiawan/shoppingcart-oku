@@ -1,7 +1,7 @@
 import { Map } from 'immutable';
 import actions from '../actions/ShoppingCartActions';
-import selectors from '../selectors/ShoppingCartSelectors';
-import shoppingCartReducer from './shoppingCart';
+import selectors from './selectors';
+import shoppingCartReducer from './reducer';
 
 test('shoppingCart() can add products', () => {
   // arrange

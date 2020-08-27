@@ -1,5 +1,5 @@
 import { List } from 'immutable';
-import selectors from './productsSelectors';
+import selectors from './selectors';
 
 test('toCartView() can compute total price', () => {
   // arrange

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import actions from '../actions/ShoppingCartActions';
-import ProductList from '../productList';
-import selectors from '../selectors/productsSelectors';
+import actions from '../../shopping-cart/actions';
+import ProductList from '../components/productList';
+import selectors from '../selectors';
 
 function mapStateToProps(state) {
   return {

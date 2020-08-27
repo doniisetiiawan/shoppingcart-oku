@@ -1,5 +1,5 @@
 import { Map } from 'immutable';
-import selectors from './ShoppingCartSelectors';
+import selectors from './selectors';
 
 test('toCartView() can compute total price', () => {
   // arrange

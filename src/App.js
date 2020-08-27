@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from './header';
 import './App.css';
-import ProductList from './containers/productListContainer';
-import ShoppingCart from './containers/shoppingCartContainer';
-import ProductSearch from './containers/ProductSearchContainer';
+import ProductList from './products/containers/productListContainer';
+import ShoppingCart from './shopping-cart/containers/shoppingCartContainer';
+import ProductSearch from './products/containers/ProductSearchContainer';
 
 function App() {
   return (

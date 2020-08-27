@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
-import rootReducer from './reducers';
-import thunks from './thunks/productsThunks';
+import rootReducer from './rootReducer';
+import thunks from './products/thunks';
 import App from './App';
 
 it('App can start app without crashing', () => {

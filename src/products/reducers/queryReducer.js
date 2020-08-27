@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions';
-import actions from '../actions/queryActions';
+import actions from '../actions';
 
 function setQuery(state, action) {
   return action.payload;

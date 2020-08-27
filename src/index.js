@@ -6,8 +6,8 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import rootReducer from './reducers';
-import thunks from './thunks/productsThunks';
+import rootReducer from './rootReducer';
+import thunks from './products/thunks';
 
 const store = createStore(
   rootReducer,

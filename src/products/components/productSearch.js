@@ -1,5 +1,5 @@
 import React from 'react';
-import { useInputState } from './hooks';
+import { useInputState } from '../../hooks';
 import './ProductSearch.css';
 
 function ProductSearch({ onSearch }) {

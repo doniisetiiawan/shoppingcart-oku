@@ -1,5 +1,5 @@
-import actions from '../actions/productsActions';
-import productsReducer from './products';
+import actions from '../../actions/productsActions';
+import productsReducer from './productsReducer';
 
 test('products() can reset all products', () => {
   // arrange

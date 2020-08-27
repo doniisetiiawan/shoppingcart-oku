@@ -1,6 +1,6 @@
 import { handleActions } from 'redux-actions';
 import { Map } from 'immutable';
-import actions from '../actions/ShoppingCartActions';
+import actions from './actions';
 
 function getProductQuantity(map, product) {
   const existingProduct = map.get(product.id);
